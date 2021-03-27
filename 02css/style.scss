@@ -1,0 +1,598 @@
+@import './common';
+@import './responsive';
+
+.firstview_container{
+    height: 100vh;
+    background-attachment: fixed;
+    @include back-ground('../04img/01firstview/firstview.png');
+    .header{
+        @include flex-row;
+        width: 100%;
+        height: 15%;
+        justify-content: space-between;
+    }
+    img{
+        width: 150px;
+        object-fit: contain;
+        margin: 20px;
+        @include mq('sur'){
+            width: 25%;
+        }
+    }
+    .reservation{
+        @include size(300,50);
+        @include flex-row;
+        border: 1px solid #707070;
+        border-radius: 60px;
+        background-color: #1BA82D;
+        box-shadow: 2px 2px 20px;
+        position: fixed;
+        z-index: 10;
+        top: 20px;
+        right: 20px;
+        transition: all .5s;
+        &:hover{
+            background-color: white;
+        }
+        @include mq('sur'){
+            width: 50%;
+        }
+        a{
+            @include flex-row;
+            @include font(25, 550);
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s;
+            &:hover{
+                color: #1BA82D;
+            }
+            @include mq('iphone8+'){
+                @include font(20,550);
+            }
+            @include mq('iphone5'){
+                @include font(15,550);
+            }
+        }
+    }
+    .body{
+        @include flex-row;
+        height: 85%;
+        width: 100%;
+        .leftside{
+            @include flex-column;
+            width: 30%;
+            .circle_wrapper{
+                margin-top: auto;
+                margin-bottom: 30px;
+                // @include mq(''){
+                //     height: 30%;
+                // }
+                .circle{
+                    @include size(150, 150);
+                    @include flex-row;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin: 0 0 30px 30px;
+                    box-shadow: 3px 3px 10px ;
+                    @include mq('sur'){
+                        width: 100px;
+                        height: 100px;
+                        margin: 0 0 5px 5px;
+                    }
+                    @include mq('iphone5'){
+                        width: 80px;
+                        height: 80px;
+                    }
+                    @include mq('galaho'){
+                        width: 70px;
+                        height: 70px;
+                    }
+                    p{
+                        @include font(20,550);
+                        text-align: center;
+                        margin: 0;
+                        @include mq('sur'){
+                            font-size: 13px;
+                        }
+                        @include mq('iphone5'){
+                            font-size: 10px;
+                        }
+                        @include mq('galaho'){
+                            font-size: 8px;
+                        }
+                    }
+                }
+                #num01{
+                    background-color: #62B7FF;
+                    transform: translateX(70px);
+                }
+                #num02{
+                    background-color: #D873CC;
+                }
+                #num03{
+                    background-color: #BAD137;
+                    transform: translateX(70px);
+                }
+            }
+        }
+        .rightside{
+            @include flex-column;
+            width: 70%;
+            .img_wrapper{
+                @include flex-column;
+                margin-top: auto;
+                .stores{
+                    width: 80%;
+                    margin: 0;
+                    margin-left: auto;
+                    @include mq('iphone8'){
+                        width: 70%;
+                    }
+                    @include mq('galaho'){
+                        width: 60%;
+                    }
+                }
+                .ekiten{
+                    width: 50%;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+.healthInsurance_container{
+    .question_wrapper{
+        @include flex-column;
+        height: 60vh;
+        .haveDoubts{
+            height: 100%;
+            object-fit: contain;
+            margin-top: auto;
+        }
+    }
+    .comparison_wrapper{
+        .message_wrapper{
+            @include flex-row;
+            justify-content: center;
+            h2{
+                text-align: center;
+                @include mq('sur'){
+                    @include font(25,550);
+                }
+                @include mq('iphone8+'){
+                    @include font(20,550);
+                }
+                @include mq('pixel'){
+                    @include font(18,550);
+                }
+                @include mq('iphone8'){
+                    @include font(15,550);
+                }
+                @include mq('galaho'){
+                    @include font(10,550);
+                }
+            }
+            span{
+                @include font(50,550);
+                color: yellow;
+                text-shadow: 2px 2px 10px black;
+                @include mq('sur'){
+                    @include font(35,550);
+                }
+                @include mq('iphone8+'){
+                    @include font(28,550);
+                }
+                @include mq('pixel'){
+                    @include font(25,550);
+                }
+                @include mq('iphone8'){
+                    @include font(22,550);
+                }
+                @include mq('galaho'){
+                    @include font(20,550);
+                }
+            }
+        }
+        .comparison{
+            @include flex-row;
+            min-height: 500px;
+            @include mq('iphone8+'){
+                @include flex-column;
+            }
+            .leftside{
+                @include flex-column;
+                background-color: #C0C2C9;
+                width: 50%;
+                align-items: center;
+                @include mq('iphone8+'){
+                    width: 100%;
+                }
+                .bottom_wrapper{
+                    width: 100%;
+                    height: 100%;
+                    max-height: 100px;
+                }
+            }
+            .rightside{
+                @include flex-column;
+                background-color: #37ADF3;
+                width: 50%;
+                align-items: center;
+                @include mq('iphone8+'){
+                    width: 100%;
+                }
+                .texterea{
+                    p,li{
+                        color: #1A4BAE;
+                    }
+                }
+                .img_wrapper{
+                    @include flex-column;
+                    width: 100%;
+                    height: 100%;
+                    max-height: 100px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    img{
+                        width: 40%;
+                        max-width: 150px;
+                        object-fit: contain;
+                        background-color: white;
+                        margin-bottom: 10px;
+                        @include mq('iphone8+'){
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+            .texterea{
+                @include flex-column;
+                @include font(20,550);
+                align-items: center;
+                background-color: white;
+                width: 80%;
+                height: 70%;
+                padding: 20px;
+                margin-top: 50px;
+                @include mq('sur'){
+                    @include font(15,550);
+                    margin-top: 20px;
+                }
+                ul{
+                    padding: 15px;
+                    list-style: none;
+                }
+            }
+
+        }
+    }
+}
+
+.reputation_container{
+    @include flex-column;
+    align-items: center;
+    img{
+        width: 70%;
+        object-fit: contain;
+    }
+    .imgm{
+        margin: 20px 0;
+    }
+    .imgl, .imgs{
+        margin-bottom: 20px;
+    }
+    a{
+        @include flex-row;
+        justify-content: center;
+    }
+    ul{
+        @include flex-column;
+        list-style-type: none;
+        padding: 0;
+        li{
+            @include flex-row;
+            justify-content: center;
+            margin: 10px auto;
+        }
+    }
+}
+
+.selection_container{
+    @include flex-column;
+    background-color: #A8C6E8;
+    align-items: center;
+    .title{
+        @include flex-column;
+        width: 80%;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+        div{
+            width: 80%;
+            height: 4px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+    }
+    ul{
+        @include flex-row;
+        width: 70%;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 30px auto 50px;
+        li{
+            @include flex-column;
+            align-items: center;
+            background-color: white;
+            width: 300px;
+            min-height: 150px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 20px;
+            padding: 10px;
+            margin: 20px;
+            position: relative;
+            z-index: 0;
+            line-height: 20px;
+            @include mq('galaho'){
+                width: 80%;
+            }
+            .point{
+                @include flex-column;
+                justify-content: center;
+                align-items: center;
+                width: 65px;
+                height: 65px;
+                background-color: #37ADF3;
+                border-radius: 50%;
+                color: white;
+                margin: 0;
+                position: absolute;
+                top: -10px;
+                left: -20px;
+                @include mq('iphone8'){
+                    width: 50px;
+                    height: 50px;
+                    font-size: 14px;
+                }
+                span{
+                    @include font(30,600);
+                    margin-top: 5px;
+                    @include mq('iphone8'){
+                        font-size: 20px;
+                        margin-top: 2px;
+                    }
+                }
+            }
+            .title{
+                width: 50%;
+                text-align: center;
+                margin: 10px 0;
+                display: inline;
+                @include mq('iphone8'){
+                    font-size: 10px;
+                    margin: 7px 0;
+                }
+                span{
+                    color: #1A4BAE;
+                }
+            }
+            .text{
+                text-align: left;
+                margin: 10px 20px;
+                @include mq('iphone8'){
+                    font-size: 10px;
+                    margin: 7px 10px;
+                }
+            }
+        }
+    }
+}
+
+.menuGuide_container{
+    @include flex-column;
+    align-items: center;
+    .header{
+        @include flex-row;
+        height: 110px;
+        width: 100%;
+        align-content: center;
+        background-color: #37ADF3;
+        p{
+            @include font(50, 550);
+            margin: auto;
+            margin-left: 30px;
+            color: white;
+            @include mq('sur'){
+                font-size: 35px;
+            }
+        }
+    }
+    ul{
+        @include flex-row;
+        justify-content: center;
+        list-style: none;
+        width: 90%;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 50px 0;
+        @include mq('sur'){
+            align-items: center;
+        }
+        li{
+            @include flex-row;
+            place-content:center;
+            margin: 0 30px 30px 0;
+            @include mq('ipad'){
+                margin-right: 0;
+            }
+            img{
+                margin: auto;
+                @include mq('iphone8'){
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+.access_container{
+    @include flex-column;
+    align-items: center;
+    padding-bottom: 50px;
+    background-color: #eaf4ff;
+    .store_name{
+        @include font(50, 550);
+        width: 100%;
+        text-align: center;
+        @include mq('ipad'){
+            font-size: 25px;
+        }
+        @include mq('iphone8+'){
+            font-size: 23px;
+        }
+        @include mq('iphone8'){
+            font-size: 20px;
+        }
+        @include mq('iphone5'){
+            font-size: 16px;
+        }
+    }
+    .addres_wrapper{
+        @include flex-row;
+        width: 100%;
+        min-height: 500px;
+        @include mq('ipad'){
+            @include flex-column;
+        }
+        .addres{
+            @include flex-column;
+            @include font(30,550);
+            width: 50%;
+            line-height: 50px;
+            padding: 20px;
+            @include mq('ipad'){
+                width: 100%;
+                font-size: 25px;
+            }
+            @include mq('sur'){
+                width: 100%;
+                font-size: 20px;
+            }
+            @include mq('galaho'){
+                width: 100%;
+                font-size: 18px;
+            }
+            .tel{
+                @include font(50,600);
+                color: #53B0F4;
+                margin: 0;
+                margin-top: 50px;
+                @include mq('iphone8+'){
+                    font-size: 35px;
+                }
+                @include mq('iphone8'){
+                    font-size: 30px;
+                }
+                @include mq('iphone5'){
+                    font-size: 25px;
+                }
+                @include mq('galaho'){
+                    font-size: 23px;
+                }
+                &:before{
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 50px;
+                    content: '\f87b';
+                    color: #53B0F4;
+                    margin-top: auto;
+                    margin-right: 20px;
+                    @include mq('iphone8+'){
+                        font-size: 35px;
+                    }
+                    @include mq('iphone8'){
+                        font-size: 30px;
+                    }
+                    @include mq('iphone5'){
+                        font-size: 25px;
+                    }
+                    @include mq('galaho'){
+                        font-size: 23px;
+                    }
+                }
+            }
+            .train{
+                @include font(30,550);
+                margin: 20px 0;
+                @include mq('iphone8+'){
+                    font-size: 20px;
+                }
+                @include mq('iphone5'){
+                    font-size: 17px;
+                }
+                &:before{
+                    font-family: "Font Awesome 5 Free";
+                    content: '\f239';
+                    font-size: 30px;
+                    margin-right: 20px;
+                    @include mq('iphone8+'){
+                        font-size: 20px;
+                    }
+                    @include mq('iphone5'){
+                        font-size: 17px;
+                    }
+                }
+            }
+            .car{
+                @include font(30,550);
+                margin: 0;
+                @include mq('iphone8+'){
+                    font-size: 20px;
+                }
+                @include mq('iphone5'){
+                    font-size: 17px;
+                }
+                &:before{
+                    font-family: "Font Awesome 5 Free";
+                    content: '\f1b9';
+                    font-size: 30px;
+                    margin-right: 20px;
+                    @include mq('iphone8+'){
+                        font-size: 20px;
+                    }
+                    @include mq('iphone5'){
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        .mapArea{
+            @include flex-row;
+            width: 50%;
+            justify-content: center;
+            iframe{
+                margin: 0 auto;
+            }
+            @include mq('ipad'){
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    img{
+        width: 90%;
+        max-width: 900px;
+        object-fit: contain;
+        // @include mq(''){
+        //     max-width: 600px;
+        // }
+    }
+}

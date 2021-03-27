@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/83b9443572.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../04img/01.favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../02css/reset.css">
+    <link rel="stylesheet" href="../02css/inputForm_style.css">
+    <title>iCure鍼灸整骨院</title>
+</head>
+<body>
+    <div class="inputform_container">
+        <img src="../04img/01firstview/logo.png" alt="">
+        <p class="title">ご予約受付</p>
+        <ul class="flow">
+            <li id="num1">1.入力</li>
+            <p class="nexticon"></p>
+            <li id="num2">2.確認</li>
+            <div class="nexticon"></div>
+            <li id="num3">3.完了</li>
+        </ul>
+        <form action="../05php/verification.php" method="POST" id="form">
+            <div class="name">
+                <p>お名前</p>
+                <input type="text" autocapitalize="name" placeholder="全角漢字" name="name">
+            </div>
+            <div class="name">
+                <p>お名前（ふりがな）</p>
+                <input type="text" autocapitalize="name" placeholder="全角ひらがな" name="hurigana">
+            </div>
+            <div class="tel">
+                <p>電話番号</p>
+                <input type="text" autocapitalize="tel" name="tel" placeholder="ハイフン無し">
+            </div>
+            <div class="mail">
+                <p>メールアドレス</p>
+                <input type="text" autocapitalize="email" name="email">
+            </div>
+            <div class="date">
+                <p>ご来院希望日</p>
+                <input type="date" name="date">
+            </div>
+            <div class="store">
+                <p>ご希望院名</p>
+                <input type="text" name="storename">
+            </div>
+            <div class="request">
+                <p>ご要望など（任意）</p>
+                <textarea cols="30" rows="10" name="request"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit" value="確認画面へ">
+                <input type="reset">
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="../03script/script.js"></script>
+</body>
+</html>
